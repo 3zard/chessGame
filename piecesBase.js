@@ -1,7 +1,7 @@
 class PiecesBase {
   constructor(name, color, position) {
     if (new.target === PiecesBase) {
-      throw new Error("Cannot instantiate abstract class Player");
+      throw new Error("Cannot instantiate abstract class PiecesBase");
     }
     this.name = name;
     this.color = color;
