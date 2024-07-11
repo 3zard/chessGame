@@ -1,20 +1,26 @@
-function Position (row, column) {
-    if (this.contructor === Position) {
-        throw new Error(`Cannot instantiate abstract class position`);
+class Position {
+    constructor(row, column) {
+        if (new.target === Position) {
+            throw new Error("Cannot instantiate abstract class Position")
+        }
+        this.row = row
+        this.column = column
     }
-    this.row = row;
-    this.column = this.column;
+    
 
-    this.getRow = function () {
-        return this.row;
+    getRow() {
+        return this.row
     }
-    this.getColumn = function () {
-        return this.column;
+
+   getColumn() {
+        return this.column
     }
-    this.setRow = function (row) {
-        this.row = row;
+
+    setRow(row) {
+        this.row = row
     }
-    this.setColumn = function (column) {
-        this.column = column;
+    
+    setColumn(column) {
+        this.column = column
     }
 }
